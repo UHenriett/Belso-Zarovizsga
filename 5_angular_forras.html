@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Unit teszt feladat</title>
+	<script src="testBase.js"></script>
+</head>
+<body>
+    <div id="newProj">
+        cd C:/Users/utihe/Desktop/RUANDER/zvizsga
+        ng new listaFeladat
+        cd listaFeladat
+        ng serve
+    </div>
+    <div id="newComp">
+        cd listaFeladat
+        ng generate component listacomp
+    </div>
+    <div id="elemekArray">
+        let elemek: Array<string> = ["Elem1", "Elem2", "Elem3"];
+    </div>
+    <div id="angularFelsorolas">
+        <h2>Elemek listája:</h2>
+        <ul>
+            <li *ngFor="let elem of elemek">elem: {{ elem }}</li>
+        </ul>
+    </div>
+	<hr>
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+	<script src="testAngular.js"></script>
+</body>
+</html>
