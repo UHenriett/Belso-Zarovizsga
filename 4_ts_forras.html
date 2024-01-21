@@ -9,6 +9,41 @@
 	<script src="<!-- ide linkejük a lefordított script-et -->"></script>
 	<script src="testBaseTSUnit.js"></script>
 	</script>
+
+function osszesOszto(szam: number): number[] {
+	const osztok: number[] = [];
+
+	for (let i = 1; i <= szam; i++) {
+		if (szam % i === 0) {
+			osztok.push(i);
+		}
+	}
+
+	return osztok;
+}
+
+function parosDarab(szamTomb: number[]): number {
+	let parosSzamokSzama = 0;
+
+	for (let i = 0; i < szamTomb.lenght; i++) {
+		const currentNumber = szamTomb[i];
+
+		if (currentNumber % 2 === 0) {
+			parosSzamokSzama++;
+		}
+	}
+
+	return parosSzamokSzama;
+}
+
+function fuggvenyhivasPalindrom(fuggveny: () => string): boolean {
+	const tisztaSzoveg = fuggveny().replace(/[\s.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').toLowerCase();
+
+	const forditottSzoveg = tisztaSzoveg.split('').reverse().join('');
+	return tisztaSzoveg === forditottSzoveg;
+}
+
+
 </head>
 <body>
     <div></div>
